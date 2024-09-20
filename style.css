@@ -8,76 +8,154 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    background-color: black;
+
 }
 
 #Demo{
     height: 100%;
-    width: 95%;
+    width: 100%;
     padding:20px 10px ;
-    background-color: dimgray;
     display: grid;
     grid-template-rows: repeat(5,1fr);
-    grid-template-columns:repeat(8,1fr);
-    gap: 30px;
+    grid-template-columns:repeat(4,1fr);
+    gap: 15px;
+
 }
 
 .posters{
-    height: 280px;
+    height: 380px;
     border: 2px solid black;
-    width:215px;
+    width:268px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    border-radius: 5px;
     align-items: center;
+    position: relative;
 }
 .posters img{
-    height: 175px;
-    width: 210px;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 4px 5px rgb(0 0 0 / 20%);
 }
+.posters .overlay {
+    width: 100%;
+    max-height: 100%;
+    min-height: auto;
+    position: absolute;
+    bottom: -100%;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px 10px 0px 0px;
+    left: 0;
+    transition: 0.5s;
+    background-color: white;
+}
+.posters span {
+    color: orange;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+}
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.posters:hover .overlay {
+    bottom: 0%;
+}
+.overlay h2 {
+    margin-bottom: 10px;
+}
+.title h3{
+    font-size: 18px;
+
+}
+.posters p{
+    font-size: 13px;
+
+}
+
+#text{
+    display: none;
+}
+
+.posters .trailerBtn{
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+    
+}
+
 .main{
-    height: 280px;
+    height: 380px;
+    width:268px;
     border: 2px solid black;
-    width:215px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     align-items: center;
+    position: relative;
 }
 .main img{
-    height: 175px;
-    width: 210px;
+    height: 100%;
+    width: 100%;
 }
-.linksbuttons{
-    height: 40px;
-    width: 95%;
+
+.main .overlay {
+    width: 100%;
+    max-height: 100%;
+    min-height: auto;
+    position: absolute;
+    bottom: -100%;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px 10px 0px 0px;
+    left: 0;
+    transition: 0.5s;
+    background-color: white;
+}
+.main span {
+    color: orange;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+}
+.title {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: darkgrey;
+    justify-content: space-between;
 }
-#btn1{
-    height: 35px;
-    width: 80px;
-    margin: 20px;
+.main:hover .overlay {
+    bottom: 0%;
+}
+.overlay h2 {
+    margin-bottom: 10px;
+}
+.title h3{
+    font-size: 20px;
+
+}
+.main p{
+    font-size: 13px;
+}
+.main .trailerBtn{
+    height: 40px;
+    width: 100px;
     font-weight: bold;
+    margin-top: 10px;
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+    
 }
-#btn2{
-    height: 35px;
-    width: 80px;
-    margin: 20px;
-    font-weight: bold;
-}
-#btn3{
-    height: 35px;
-    width: 80px;
-    margin: 20px;
-    font-weight: bold;
-}
-#btn4{
-    height: 35px;
-    width: 90px;
-    margin: 20px;
-    font-weight: bold;
-}
+
 .details{
     width: 100%;
     margin-top: 10px;
