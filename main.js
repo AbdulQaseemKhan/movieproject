@@ -25,11 +25,15 @@ const popularMovies = async () => {
                     <p> 
                         ${item.overview}
                     </p>
-                    <button class="trailerBtn">Watch Trailer</button>
+                    <button class="trailerBtn"  onclick="redirectToDetail(${item.id})">More Detail</button>
                  </div>
                  </div>`
 
         ).join(''); 
+};
+
+const redirectToDetail = (id) => {
+    window.location.href = `home.html?movie_id=${id}`;
 };
 
 popularMovies();
@@ -57,7 +61,7 @@ const SearchMovies = async () => {
                     <p> 
                         ${item.overview}
                     </p>
-                    <button class="trailerBtn">Watch Trailer</button>
+                    <button class="trailerBtn"  onclick="redirectToDetail(${item.id})">More Detail</button>
                  </div>
                  </div>`
                 

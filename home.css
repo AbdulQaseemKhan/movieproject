@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#cast{
+    height: 90px;
+    width: 100%;
+}
+
+.castList img{
+    width: 70px;
+}
+.castList h5{
+    font-size: 14px;
+}
